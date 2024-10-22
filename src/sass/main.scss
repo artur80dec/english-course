@@ -1,8 +1,26 @@
+@use './colors' as c;
+@use './components';
+@use './animation';
+@use './mixins' as i;
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 html {
-  
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  background-color: c.$first;
+  color: c.$black;
+  font-family: 'DMSans-Italic';
+}
+.roman {
+  font-family: sans-serif;
+  @include i.mrg;
+  position: relative;
 }
