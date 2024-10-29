@@ -20,6 +20,7 @@ body {
   color: c.$black;
   font-family: 'DMSans-Bold';
   font-size: 1.6rem;
+  height: 200vh;
 }
 // .roman {
 //   font-family: sans-serif;
@@ -30,16 +31,30 @@ body {
 
 // LISTA ROZWIJANA!!
 
+nav {
+  position: fixed;
+  // margin-top: 10px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: c.$black;
+  }
+  background-color: c.$menu;
+  border-bottom: 1px solid black;
+  width: 100%; //przy position fixed musimy dodać width: 100%!!
+}
+
 ul {
+  // position: fixed;
   list-style: none;
   font-size: 2rem;
 }
 .menu {
   display: flex;
   justify-content: flex-end;
-  
 }
 .menu-item {
+  // position: fixed;
   display: inline-block;
   width: 200px;
   line-height: 85px;
@@ -49,23 +64,15 @@ ul {
     margin-right: 15%;
     border-right: 1px dashed #333;
   }
+
   cursor: pointer;
-}
-nav {
-  // margin-top: 10px;
-  text-align: center;
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-  background-color: rgba(0, 0, 0, .2);
-  border-bottom: 1px solid black;
 }
 
 .dropdown {
   position: absolute;
   width: 200px;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: c.$menu;
+  border-top: 1px solid #333;
   
 
   li {
@@ -73,12 +80,31 @@ nav {
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
-    
+    position: relative;
   }
   &__first {
     li {
       border-left: 1px solid black;
     }
+  }
+
+  .submenu {
+    font-size: 1.1rem;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    background-color: beige;
+    height: 20px;
+    width: 90%;
+    line-height: 20px;
+    border-radius: 8px;
+    font-weight: normal;
+    opacity: 0;
+    transition: opacity .2s;
+    color: c.$black;
   }
 }
 
@@ -86,12 +112,32 @@ nav {
   display: block;
   animation: menu .7s 1;
 }
-
-@keyframes menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.menu-item>a {
+  position: relative;
+  transition: scaleX .3s;
 }
+
+.menu-item:hover>a::before {
+  // background-color: c.$menu-hover;
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  animation: line .3s
+}
+
+
+.dropdown li:hover .submenu {
+  opacity: 1;
+}
+
+.dropdown li:hover {
+  background-color: c.$menu-hover;
+}
+
+
+// MAIN CONTENT
+
