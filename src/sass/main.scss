@@ -42,12 +42,14 @@ nav {
   background-color: c.$menu;
   border-bottom: 1px solid black;
   width: 100%; //przy position fixed musimy dodać width: 100%!!
+  z-index: 5;
 }
 
 ul {
   // position: fixed;
   list-style: none;
   font-size: 2rem;
+  // text-transform: uppercase;
 }
 .menu {
   display: flex;
@@ -137,7 +139,71 @@ ul {
 .dropdown li:hover {
   background-color: c.$menu-hover;
 }
+.icon-home {
+  position: absolute;
+  left: 40px;
+  top: 35px;
+}
 
 
 // MAIN CONTENT
 
+.wrapper {
+  top: 10%;
+  // left: 20%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 0;
+  border: 1px solid black;
+  max-width: 1000px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px;
+
+  .boxes {
+    width: 100%;
+    min-height: 600px;
+    background-color: c.$fourth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .box-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: c.$dark-red;
+    margin: 0;
+    padding: 7px;
+    font-size: 2rem;
+    color: c.$white;
+    font-family: 'FiraSans';
+  }
+
+  .box {
+    line-height: 75px;
+    background-color: rgba(0, 0, 0, .2);
+    width: 40%;
+    margin: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    cursor: pointer;
+    font-family: 'FiraSans';
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 5px;
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+}
