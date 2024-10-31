@@ -1,0 +1,1 @@
+const ask = 'zbieg okoliczności-zakres słów-zająć stanowsko-zaciemniony-wyłączyć się, odpłynąć(gdzieś myślami)-wysiąść(z autobusu)-wyraźny(np. dowód)-w szczególności-w kontakcie z-ujednalicający-Twoja kolej-tak samo jak ja, tak i ty-subtelne odcienie-rzucać cień(np. na sprawę)-'
