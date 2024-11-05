@@ -163,15 +163,16 @@ ul {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px;
+  margin-bottom: 3rem;
 
   &__alternative {
-    min-height: 200px;
+    min-height: fit-content;
   }
 
 
   .boxes {
     width: 100%;
-    min-height: 600px;
+    // min-height: 600px;
     background-color: c.$fourth;
     display: flex;
     justify-content: center;
@@ -179,26 +180,9 @@ ul {
     flex-wrap: wrap;
 
     &__alternative {
-      min-height: 200px;
+      margin-top: 20px;
     }
 
-    .box {
-
-      &_e {
-        min-height: 40px;
-        margin: 1.1rem;
-        color: #333;
-        font-size: 1.5rem;
-        cursor: default;
-
-        &__input {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-        }
-      }
-
-    }
   }
   .box-heading {
     position: absolute;
@@ -216,8 +200,44 @@ ul {
 
     &__e {
       font-size: 1.5rem;
+      // display: none;
     }
   }
+
+  .questions,
+  .answers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // height: 200px;
+    padding-top: 30px;
+  }
+
+ 
+
+  // .questions:first-child,
+  // .answers:first-child {
+  //   // margin-top: 20%;
+  // }
+
+  .questions {
+    width: 50%;
+    background-color: rgb(255, 255, 0, .1);
+    // height: 100%;
+  }
+
+
+
+  .answers {
+    width: 50%;
+    background-color: rgb(255, 255, 0, .1);
+    // height: 100%;
+    
+  }
+
+
+  // MAIN MENU
 
   .box {
     min-height: 75px;
@@ -247,35 +267,6 @@ ul {
       text-align: center;
     }
 
-    input {
-
-      width: 70%;
-      padding: 10px 12px;
-      font-size: 1.8rem;
-      font-family: 'FiraSans';
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0px 0px 3px #333;
-      background-color: rgba(255, 255, 255, .4);
-      margin-left: 5%;
-
-      &::placeholder {
-        color: rgba(51, 51, 51, .1);
-      }
-
-      &:focus {
-        border: 1px dashed #333;
-        outline: none;
-      }
-
-
-    }
-
-    .words {
-      // color: red;
-    }
-
   }
-  
 }
 
