@@ -212,6 +212,8 @@ ul {
     flex-direction: column;
     // height: 200px;
     padding-top: 30px;
+    width: 50%;
+    background-color: rgb(255, 255, 0, .1);
   }
 
  
@@ -222,18 +224,26 @@ ul {
   // }
 
   .questions {
-    width: 50%;
-    background-color: rgb(255, 255, 0, .1);
+    
     // height: 100%;
   }
 
 
 
   .answers {
-    width: 50%;
-    background-color: rgb(255, 255, 0, .1);
     // height: 100%;
     
+    
+    .checking {
+      position: absolute;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      z-index: 1;
+      // display: none;
+      
+    }
   }
 
 

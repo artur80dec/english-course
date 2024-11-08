@@ -10,13 +10,8 @@ const engMattAnswNov2018Fungus = 'because of its modus operandi-Brace yourself f
 
 // console.log(questions, answers);
 const boxes = document.querySelectorAll('.boxes');
-const eviub2 = document.querySelector('.eviu-two-b');
-const getQuetion = document.getElementsByClassName('box-exc-quest');
-
-
-// boxes.classList.add('bo')
-let popo = 0;
-
+const questionBoxes = document.querySelectorAll('.questions');
+const answerBoxes = document.querySelectorAll('.answers');
 
 
 const main = () => {
@@ -27,38 +22,50 @@ const main = () => {
 
 
 const eviuB2Unit1 = () => {
-  const box = 1;
-  questions.forEach(el => creatorWords(box, el));
+  const box = 0;
+  const answerBox = 0;
+  questions.forEach(el => creatorWords(box, el))
+  answers.forEach(el => createAnswers(answerBox, el))
 }
 
-const eviub3 = () => {
-  const box = 2;
-  engMattQuestNov2018Fungus.forEach(el => creatorWords(box, el));
-}
+
+
+// const eviub3 = () => {
+//   const box = 1;
+//   engMattQuestNov2018Fungus.forEach(el => creatorWords(box, el));
+// }
 
 // questions.forEach(el => );
 
 const creatorWords = (box, el) => {
-  const question = document.createElement('div');
-  question.classList.add('questions');
-  boxes[box].append(question);
+  
   const wordBox = document.createElement('div');
   wordBox.classList.add('box-exc-quest');
-  question.append(wordBox);
+  questionBoxes[box].append(wordBox);
   const word = document.createElement('p');
   word.classList.add('words')
   wordBox.append(word);
   word.textContent = el;
-  const answer = document.createElement('div');
-  answer.classList.add('answers');
-  boxes[box].append(answer);
-  const answerBox = document.createElement('div');
-  answerBox.classList.add('box-exc-answer');
-  answer.append(answerBox);
-  const answerInput = document.createElement('input');
-  answerBox.append(answerInput);
-  answerInput.placeholder = 'Type the answer';
+  
+  
 }
+
+const createAnswers = (answerBox, el) => {
+  // const answer = document.createElement('div');
+  // answer.classList.add('answers');
+  // boxes[box].append(answer);
+  const divAnswer = document.createElement('div');
+  divAnswer.classList.add('box-exc-answer');
+  answerBoxes[answerBox].append(divAnswer);
+  const answerInput = document.createElement('input');
+  divAnswer.append(answerInput);
+  answerInput.placeholder = el;
+  
+}
+
+
+
+
 
 
 
